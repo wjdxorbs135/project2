@@ -1,0 +1,26 @@
+create table chatTable (
+    id          varchar2(20) constraint ChatTable_id_pk primary key,
+    pw          varchar2(20),
+    name        varchar2(20),
+    department  varchar2(20),
+    position    varchar2(20),
+    tel         varchar2(20),
+    gender      varchar2(20)
+);
+
+Drop table chatTable;
+
+select * from chatTable;
+select distinct department from chatTable;
+select name, position from chatTable where department = '인사부' ;
+
+INSERT INTO chatTable VALUES ('wjddk', '1234', '최수형', '인사부', '사원', '010-2345-2453', '여자');
+INSERT INTO chatTable VALUES ('sdnvkxcv', '6421', '고유한', '인사부', '부장', '010-5187-4215', '남자');
+INSERT INTO chatTable VALUES ('sdfjklx', '8514', '박지영', '인사부', '차장', '010-8457-8124', '여자');
+INSERT INTO chatTable VALUES ('qqspdm', '7902', '박소정', '총무부', '부장', '010-4154-4321', '여자');
+INSERT INTO chatTable VALUES ('sdfowep', '4512', '박희건', '총무부', '차장', '010-1546-4921', '남자');
+INSERT INTO chatTable VALUES ('sdkvxck', '7896', '조윤성', '총무부', '대리', '010-9456-4215', '남자');
+INSERT INTO chatTable VALUES ('sdfksldfl', '1512', '윤석빈', '재무부', '인턴', '010-4616-6256', '남자');
+INSERT INTO chatTable VALUES ('qnddjek7', '596265aq', '윤재호', '재무부', '부장', '010-8548-3853', '남자');
+
+commit;
